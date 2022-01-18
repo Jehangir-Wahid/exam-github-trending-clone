@@ -14,8 +14,6 @@ export default () => {
         dispatch(getDevelopers());
     }, []);
 
-    console.log(developers.length);
-
     return (
         <div className="Box position-relative container-lg p-responsive pt-6">
             <ListingHeader isRepositoryPage={false} />
