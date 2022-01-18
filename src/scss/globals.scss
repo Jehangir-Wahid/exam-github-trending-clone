@@ -1,0 +1,103 @@
+html,
+body {
+    height: 100%;
+    color: #8b949e !important;
+    background-color: #0d1117 !important;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji";
+    font-size: 14px !important;
+}
+
+.btn {
+    color: #8b949e !important;
+    border: 1px solid #30363d !important;
+}
+
+.btn:hover,
+.btn.hover,
+[open] > .btn {
+    background-color: #30363d !important;
+    border-color: #8b949e !important;
+}
+
+.color-fg-sponsors {
+    color: #db61a2 !important;
+}
+
+svg {
+    margin-right: 3px;
+}
+
+.h1 {
+    color: #c9d1d9 !important;
+}
+
+.heading-p {
+    font-size: 16px;
+}
+
+.parent-article,
+.page-heading {
+    border-color: transparent !important;
+    border-bottom: 1px solid #30363d !important;
+    border-radius: 0px !important;
+}
+
+.Box,
+.Box-header {
+    border: 1px solid #30363d;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    margin-left: 3px;
+}
+
+.subnav-item {
+    color: #f0f6fc !important;
+    border: 1px solid #30363d !important;
+}
+
+.subnav-item.current-page {
+    background-color: #1f6feb !important;
+}
+
+.octicon-repo {
+    color: #8b949e !important;
+}
+
+.Link--muted:hover {
+    color: #58a6ff !important;
+}
+
+summary > span {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-top: 0px !important;
+}
+
+.table-list-header-toggle .select-menu-button:hover,
+.table-list-header-toggle .select-menu-button.selected,
+.table-list-header-toggle .select-menu-button.selected:hover {
+    color: #c9d1d9 !important;
+}
+
+.footer-container {
+    border-color: transparent !important;
+    border-top: 1px solid #30363d !important;
+    border-radius: 0px !important;
+}
