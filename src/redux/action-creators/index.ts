@@ -1,7 +1,7 @@
 import { ActionTypes } from "../action-types";
 import { Dispatch } from "redux";
 import { Action } from "../actions";
-import TrendingServer from "../../service/gh-trending"
+import TrendingServer from "../../service/server"
 import { DeveloperType, RepositoryType } from "../types";
 
 export const getDevelopers = () => {
