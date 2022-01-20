@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Iprops {
     isRepositoryPage: boolean;
@@ -6,100 +7,141 @@ interface Iprops {
 
 const ListingHeader: React.FC<Iprops> = ({ isRepositoryPage }) => {
     return (
-        <div className="bg-dark">
-            <div className="Box-header d-md-flex flex-items-center flex-justify-between">
-                <nav className="subnav mb-0" aria-label="Trending" data-pjax="">
-                    <a
-                        className={
-                            "js-selected-navigation-item subnav-item bg-dark" +
-                            (isRepositoryPage ? " current-page" : "")
-                        }
-                        aria-current="page"
-                        href="/"
-                    >
-                        Repositories
-                    </a>
-                    <a
-                        className={
-                            "js-selected-navigation-item subnav-item bg-dark" +
-                            (!isRepositoryPage ? " current-page" : "")
-                        }
-                        href="/developers"
-                    >
-                        Developers
-                    </a>
-                </nav>
-
-                <div className="d-sm-flex flex-items-center flex-md-justify-end mt-3 mt-md-0 table-list-header-toggle ml-n2 ml-md-0">
-                    {isRepositoryPage ? (
-                        <div className="position-relative mb-3 mb-sm-0">
-                            <details
-                                className="details-reset details-overlay select-menu select-menu-modal-right hx_rsm"
-                                id="select-menu-spoken-language"
+        <div className="card-header bg-dark-secondary border-dark-secondary p-4">
+            <div className="row flex-column flex-lg-row align-items-center">
+                <div className="col">
+                    <div className="text-white">
+                        <nav className="nav">
+                            <Link
+                                className={
+                                    "nav-link fw-bold px-4 py-1 d-flex align-items-center border border-dark-secondary rounded-start text-light-secondary" +
+                                    (isRepositoryPage
+                                        ? " border-primary bg-primary text-white"
+                                        : "")
+                                }
+                                to="/"
                             >
-                                <summary
-                                    data-view-component="true"
-                                    className="select-menu-button"
-                                    aria-haspopup="menu"
+                                Repositories
+                            </Link>
+                            <Link
+                                className={
+                                    "nav-link fw-bold px-4 py-1 d-flex align-items-center border border-dark-secondary border-start-0 rounded-end text-light-secondary" +
+                                    (!isRepositoryPage
+                                        ? " border-primary bg-primary text-white"
+                                        : "")
+                                }
+                                to="/developers"
+                            >
+                                Developers
+                            </Link>
+                        </nav>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="d-flex flex-column flex-lg-row medium mt-4 mt-lg-0 justify-content-end">
+                        {isRepositoryPage ? (
+                            <div className="dropdown mb-4 mb-lg-0">
+                                <a
+                                    className="dropdown-toggle d-flex align-items-center dropdown-toggle text-decoration-none text-secondary mx-3"
+                                    href="#"
                                     role="button"
+                                    id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
                                 >
                                     Spoken Language:
-                                    <span
-                                        data-menu-button=""
-                                        data-view-component="true"
-                                        className="text-bold"
-                                    >
-                                        Any
-                                    </span>
-                                </summary>
-                            </details>
-                        </div>
-                    ) : null}
+                                    <strong className="ms-1">Any</strong>
+                                </a>
+                                <ul
+                                    className="dropdown-menu bg-dark border border-dark-secondary"
+                                    aria-labelledby="dropdownMenuLink"
+                                >
+                                    <li key="1" className="border-0 border-bottom border-dark-secondary">
+                                        <a className="dropdown-item text-muted small" href="#">
+                                            Action
+                                        </a>
+                                    </li>
+                                    <li key="2" className="border-0 border-bottom border-dark-secondary">
+                                        <a className="dropdown-item text-muted small" href="#">
+                                            Another action
+                                        </a>
+                                    </li>
+                                    <li key="3" className="border-0 border-dark-secondary">
+                                        <a className="dropdown-item text-muted small" href="#">
+                                            Something else here
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        ) : null}
 
-                    <div className="mb-3 mb-sm-0">
-                        <details
-                            className="details-reset details-overlay select-menu select-menu-modal-right hx_rsm"
-                            id="select-menu-language"
-                        >
-                            <summary
-                                data-view-component="true"
-                                className="select-menu-button"
-                                aria-haspopup="menu"
+                        <div className="dropdown mb-4 mb-lg-0">
+                            <a
+                                className="dropdown-toggle d-flex align-items-center dropdown-toggle text-decoration-none text-secondary mx-4"
+                                href="#"
                                 role="button"
+                                id="dropdownMenuLink"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
                             >
                                 Language:
-                                <span
-                                    data-menu-button=""
-                                    data-view-component="true"
-                                    className="text-bold"
-                                >
-                                    Any
-                                </span>
-                            </summary>
-                        </details>
-                    </div>
-
-                    <div>
-                        <details
-                            className="details-reset details-overlay select-menu select-menu-modal-right hx_rsm hx_rsm--auto-height"
-                            id="select-menu-date"
-                        >
-                            <summary
-                                data-view-component="true"
-                                className="select-menu-button"
-                                aria-haspopup="menu"
-                                role="button"
+                                <strong className="ms-1">Any</strong>
+                            </a>
+                            <ul
+                                className="dropdown-menu bg-dark border border-dark-secondary"
+                                aria-labelledby="dropdownMenuLink"
                             >
-                                Date range:
-                                <span
-                                    data-menu-button=""
-                                    data-view-component="true"
-                                    className="text-bold"
-                                >
-                                    Today
-                                </span>
-                            </summary>
-                        </details>
+                                <li key="1" className="border-0 border-bottom border-dark-secondary">
+                                    <a className="dropdown-item text-muted small" href="#">
+                                        Action
+                                    </a>
+                                </li>
+                                <li key="2" className="border-0 border-bottom border-dark-secondary">
+                                    <a className="dropdown-item text-muted small" href="#">
+                                        Another action
+                                    </a>
+                                </li>
+                                <li key="3" className="border-0 border-dark-secondary">
+                                    <a className="dropdown-item text-muted small" href="#">
+                                        Something else here
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="dropdown">
+                            <a
+                                className="dropdown-toggle d-flex align-items-center dropdown-toggle text-decoration-none text-secondary mx-3"
+                                href="#"
+                                role="button"
+                                id="dropdownMenuLink"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Date Range:
+                                <strong className="ms-1">Today</strong>
+                            </a>
+                            <ul
+                                className="dropdown-menu bg-dark border border-dark-secondary"
+                                aria-labelledby="dropdownMenuLink"
+                            >
+                                <li key="1" className="border-0 border-bottom border-dark-secondary">
+                                    <a className="dropdown-item text-muted small" href="#">
+                                        Action
+                                    </a>
+                                </li>
+                                <li key="2" className="border-0 border-bottom border-dark-secondary">
+                                    <a className="dropdown-item text-muted small" href="#">
+                                        Another action
+                                    </a>
+                                </li>
+                                <li key="3" className="border-0 border-dark-secondary">
+                                    <a className="dropdown-item text-muted small" href="#">
+                                        Something else here
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

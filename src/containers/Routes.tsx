@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Developers from "./pages/Developers";
-import Repositories from "./pages/Repositories";
+import Developers from "./Developers/";
+import Repositories from "./Repositories/";
 
 function AppRoutes() {
     return (
